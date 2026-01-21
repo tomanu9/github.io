@@ -2,71 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Digital Documents Store</title>
-  <meta name="description" content="Simple, fast digital downloads. One-time purchases.">
+  <title>Buy My Product</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      font-family: system-ui, -apple-system, sans-serif;
-      background: #ffffff;
-      color: #111;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      text-align: center;
+      padding: 40px;
+    }
+    .container {
+      background: white;
+      max-width: 500px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     h1 {
       margin-bottom: 10px;
     }
-    .product {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #eee;
-      padding: 20px 0;
-    }
-    .product-info {
-      max-width: 60%;
+    p {
+      color: #555;
     }
     .price {
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
-    footer {
-      margin-top: 60px;
-      font-size: 14px;
-      color: #666;
-      text-align: center;
+      font-size: 24px;
+      margin: 20px 0;
     }
   </style>
 </head>
 <body>
 
-<h1>Digital Documents</h1>
-<p>High-quality digital files. Instant access after purchase.</p>
+  <div class="container">
+    <h1>Your Product Name</h1>
+    <p>Short description of what the buyer gets.</p>
 
-<div class="product">
-  <div class="product-info">
-    <h3>Product One</h3>
-    <p>A short description of what this document contains.</p>
-    <div class="price">$9.99</div>
+    <div class="price">$19.99</div>
+
+    <!-- PayPal Buy Now Button -->
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+      <input type="hidden" name="cmd" value="_xclick">
+      <input type="hidden" name="business" value="1tonytoto1@gmail.com">
+      <input type="hidden" name="item_name" value="NOTE">
+      <input type="hidden" name="amount" value="200.00">
+      <input type="hidden" name="currency_code" value="EUR">
+      <input type="hidden" name="return" value="https://tomanu9.github.io/thank-you.html">
+      <input type="hidden" name="cancel_return" value="https://tomanu9.github.io/">
+      <input type="submit" value="Buy Now with PayPal">
+    </form>
   </div>
-  <!-- Replace PAYPAL_BUTTON_CODE_HERE -->
-  PAYPAL_BUTTON_CODE_HERE
-</div>
-
-<div class="product">
-  <div class="product-info">
-    <h3>Product Two</h3>
-    <p>A brief description of this digital product.</p>
-    <div class="price">$14.99</div>
-  </div>
-  PAYPAL_BUTTON_CODE_HERE
-</div>
-
-<footer>
-  <p>© 2026 Your Name · Contact: youremail@example.com</p>
-</footer>
 
 </body>
 </html>
+
